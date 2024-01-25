@@ -1,0 +1,12 @@
+:root {
+  --primary-h: 49;
+  --primary-s: 100%;
+  --prmary-l: 62%;
+  --primary-base: var(--primary-h), var(--primary-s);
+  --primary: hsla(var(--primary-h),var(--primary-s),var(--primary-l));
+
+  --nav-text: hsla(var(--primary-h), var(--primary-s), 40%);
+  --nav-text-hover: hsla(var(--primary-h), var(--primary-s), 30%);
+  --nav-links: hsla(var(--primary-h), var(--primary-s), 75%);
+  --nav-links-hover: hsla(var(--primary-h), var(--primary-s), 60%);
+}

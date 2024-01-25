@@ -1,0 +1,114 @@
+header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	height: 120px;
+	background: url(../images/wwcc-background.jpg) no-repeat center top/2500px;
+
+	@include bp(s) {
+		background-size: 1800px;
+	}
+
+	.link-home {
+		position: absolute;
+		top: 20px;
+		width: 20vw;
+		height: 20vw;
+		min-width: 150px;
+		left: calc(50vw - max(10vw, 75px));
+
+		@include bp(l) {}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			filter: drop-shadow(0px 0px 20px hsla(0, 0%, 0%, .5));
+			transition: .5s ease all;
+
+			&:hover {
+				filter: drop-shadow(0px 0px 20px hsla(0, 0%, 0%, .8));
+			}
+		}
+	}
+
+	.nav-toggle {
+		height: 20px;
+		opacity: .6;
+		display: block;
+		background: white;
+		padding: .5em .75em;
+		border-radius: .75em;
+		margin: 2em 2em 0 0;
+
+		&::before {
+			content: "☰";
+		}
+
+		&.shown {
+			border-radius: .75em .75em 0 0;
+			filter: drop-shadow(-10px 10px 10px hsla(0, 0%, 0%, .3));
+		}
+
+	}
+
+	nav {
+		position: absolute;
+		top: calc(3em + 20px);
+		right: 2em;
+		max-height: 0;
+		max-width: 0;
+		overflow: hidden;
+		transition: .5s ease max-height;
+
+		&.selected {
+			max-height: 900px;
+			max-width: 300px;
+			transition: .75s ease max-height;
+			filter: drop-shadow(-10px 10px 10px hsla(0, 0%, 0%, .3));
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			@include pm;
+
+			li {
+				@include pm;
+
+
+				&:first-child a {
+					border-radius: .75em 0 0 0;
+				}
+
+				&:last-child a {
+					border-radius: 0 0 .75em .75em;
+					border: none;
+				}
+
+				a {
+					display: flex;
+					justify-content: space-between;
+					background: var(--nav-links);
+					text-decoration: none;
+					padding: .5em .75em;
+					border-bottom: 2px solid hsla(0, 0%, 100%, .4);
+					border-top: 4px solid hsla(0, 0%, 0%, 0);
+					color: var(--nav-text);
+					transition: .5s ease all;
+
+					&:hover {
+						background: var(--nav-links-hover);
+						color: var(--nav-text);
+						border-bottom: 2px solid hsla(0, 0%, 100%, .6);
+						border-top: 4px solid hsla(0, 0%, 0%, .05)
+					}
+
+					span {
+						text-align: right;
+						min-width: 75px;
+					}
+				}
+			}
+		}
+	}
+}

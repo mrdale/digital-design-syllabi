@@ -1,0 +1,40 @@
+.textbooks {
+  @include pm;
+  margin: 1em 0 2em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  // justify-items: stretch;
+
+  li {
+    @include pm;
+    margin-top: 0 !important;
+
+
+    p{
+      font-size:smaller;
+      margin-top: .75em;;
+    }
+
+    a {
+      display: flex;
+      border:8px solid transparent;
+      transition:.3s border-color;
+      margin-left:-8px;
+
+      &:hover{
+        border-color: #bbb;
+      }
+    }
+
+    img {
+      aspect-ratio: 8 / 10;
+      max-width: 100%;
+      object-fit: cover;
+    }
+// overrides for wide books
+    :is(#bus261) &:first-child img{
+      aspect-ratio: 10 / 8 ;
+    }
+  }
+}

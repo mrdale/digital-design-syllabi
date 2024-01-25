@@ -1,0 +1,127 @@
+---
+const { frontmatter } = Astro.props;
+import Requirements from "../components/wwcc-requirements.astro";
+import Legal from "../components/wwcc-legal.astro";
+import Navs from "../components/navs.astro";
+import Books from "../components/books.astro";
+import "../styles/style.scss";
+
+const general = {
+	mode: "In Person",
+	campus: "WWCC North Campus",
+	facility: "WSP",
+	complex: "East",
+	classroom: "101",
+	time: "Weekdays, 8-11am & 12-3pm",
+	officeHours: "Weekdays, 8-11am & 12-3pm",
+	instructor: "Dale Chapman",
+	email: "dale.chapman@wwcc.edu",
+	office: "East Complex Instructor Lab",
+	phone: "509.526.6438",
+};
+
+const ctcNumbers = {
+	cs110:	40814,
+	bus263:	40848,
+	cs224:	40833,
+	cs220:	40831,
+	bus261:	40846,
+	cs251:	40851,
+	cs140:	40829,
+	cs262:	40839,
+	bus288:	40851,
+	cs247:	40837,
+	cs240:	40836,
+	bus265:	40849,
+	bus250:	40852,
+	cs235:	40842,
+	cs231:	44291
+}
+
+const cleanCourse = frontmatter.number.replace(' ','').toLowerCase();
+const ctc = ctcNumbers[cleanCourse]
+
+const quarter = Math.floor((new Date().getMonth() + 3) / 3);
+const year = new Date().getYear() + 1900;
+let qname;
+switch (quarter) {
+	case 1:
+		qname = "Winter";
+		break;
+	case 2:
+		qname = "Spring";
+		break;
+	case 3:
+		qname = "Summer";
+		break;
+	default:
+		qname = "Winter";
+}
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={frontmatter.name} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" />
+		<title>{frontmatter.number} - {frontmatter.name}</title>
+
+		<!-- <script>
+
+		</script> -->
+		<script src="../js/script.js"></script>
+	</head>
+		<body id={cleanCourse} class="course syllabi">
+			<header>
+				<Navs />
+			</header>
+			<main>
+					<h1>
+						{frontmatter.name}
+						<small>({frontmatter.number})</small>
+					</h1>
+					<h4>{qname} Quarter, {year} | {ctc}</h4>
+
+					<aside>
+						<article class="details">
+							<h3>Course Details</h3>
+
+							<ul>
+								<li><strong>Credits:</strong> {frontmatter.credits}</li>
+								<li><strong>Lecture Hours:</strong> {frontmatter.hours}</li>
+								<li><strong>Mode:</strong> {frontmatter.mode}</li>
+								<li>
+									<strong>Location:</strong>
+									{general.campus}, {general.facility}
+									{general.complex}, {general.classroom}
+								</li>
+								<li><strong>Shedule:</strong> {general.time}</li>
+							</ul>
+						</article>
+						<article>
+
+							<h3>Instructor Info</h3>
+							<ul>
+								<li><strong>Instructor:</strong> {general.instructor}</li>
+								<li>
+									<strong>Email:</strong>
+									<a href="mailto:{general.email}">{general.email}</a>
+								</li>
+								<li><strong>Office number:</strong> {general.office}</li>
+								<li><strong>Phone number:</strong> {general.phone}</li>
+								<li>
+									<strong>Office hours:</strong>
+									{general.officeHours}
+								</li>
+							</ul>
+						</article>
+					</aside>
+				<h2>Master Course Outline</h2>
+				<slot />
+				<Books books={frontmatter.books} />
+				<Requirements />
+				<Legal />
+			</main>
+		</body>
+	</html>

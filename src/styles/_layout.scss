@@ -1,0 +1,72 @@
+// Breakpoints .......................................
+$bp-s: 600px;
+$bp-m: 1000px;
+$bp-l: 1600px;
+
+//Layout ............................................
+body {
+  @include pm;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif
+}
+
+main {
+  margin: auto;
+  width: 65vw;
+  max-width: 1200px;
+  padding: 10em 0 5em;
+  font-size: clamp(16px, 2vw, 24px);
+
+  @include bp(s) {
+    width: 80vw;
+  }
+
+  //Aside .....................................................
+  aside {
+    font-size: 16px;
+    width: 23vw;
+    float: right;
+    margin: 36px 0 0 2em;
+    display: grid;
+    gap: 1em;
+
+    @include bp(m) {
+      grid-template-columns: 1fr 1fr;
+      margin-left: 0;
+      float: none;
+      width: auto;
+    }
+
+    @include bp(s) {
+      grid-template-columns: 1fr;
+    }
+
+
+    ul,
+    li {
+      background: var(--nav-links);
+      border-radius: 0 0 .75em .75em;
+      @include pm;
+    }
+
+    ul {
+      margin-bottom: 1em;
+      padding-bottom: .5em;
+    }
+
+    li,
+    h3 {
+      @include linklist;
+      // border:none;
+      // background: none;
+      color: rgba(0, 0, 0, .4);
+      padding: .5em 1em;
+    }
+
+    h3 {
+      background: var(--nav-links-hover);
+      border-radius: .75em .75em 0 0;
+    }
+
+  }
+
+}

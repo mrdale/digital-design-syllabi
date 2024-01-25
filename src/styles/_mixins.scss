@@ -1,0 +1,45 @@
+//breakpoints ..........................................................
+@mixin pm ($p: 0, $m: 0, $s: none) {
+  padding: $p;
+  margin: $m;
+  list-style: $s;
+}
+
+//breakpoints ..........................................................
+@mixin linklist() {
+  padding: .75em 1em;
+  color: var(--nav-text);
+}
+
+//breakpoints ..........................................................
+@mixin bp($size, $type: max, $pixels: $bp-s) {
+  @if $size=='s' {
+    @media screen and ($type + -width: $bp-s) {
+      @content;
+    }
+  }
+
+  @else if $size=='m' {
+    @media screen and ($type + -width: $bp-m) {
+      @content;
+    }
+  }
+
+  @else if $size=='l' {
+    @media screen and ($type + -width: $bp-l) {
+      @content;
+    }
+  }
+
+
+  @else if $size=='custom' {
+    @media screen and ($type + -width: $pixels + px) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
+

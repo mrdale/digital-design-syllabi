@@ -1,0 +1,45 @@
+---
+import Navs from "../components/navs.astro";
+import "../styles/style.scss";
+
+const { frontmatter } = Astro.props;
+const quarter = Math.floor((new Date().getMonth() + 3) / 3);
+const year = new Date().getYear() + 1900;
+let qname;
+switch (quarter) {
+	case 1:
+		qname = "Winter";
+		break;
+	case 2:
+		qname = "Spring";
+		break;
+	case 3:
+		qname = "Summer";
+		break;
+	default:
+		qname = "Winter";
+}
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={frontmatter.description} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" />
+		<title>{frontmatter.title}</title>
+	</head>
+	<html>
+		<body>
+			<header>
+				<Navs />
+			</header>
+			<main>
+<h1>Digital Design Program</h1>
+<h4>WWCC North Campus {qname}, {year} </h4>
+				<slot />
+
+			</main>
+		</body>
+	</html>
+</html>

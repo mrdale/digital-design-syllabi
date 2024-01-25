@@ -1,0 +1,26 @@
+---
+const posts = await Astro.glob('../pages/**/*.md');
+import { Image } from "astro:assets";
+import wwcclogo from "../images/wwcc-logo.svg";
+---
+<script>
+const toggler = document.querySelector('.nav-toggle');
+	toggler.addEventListener('click', function(){
+		this.classList.toggle('selected');
+		this.nextElementSibling.classList.toggle('selected');
+	})
+</script>
+	<style type="scss">
+
+	</style>
+	<a class="link-home" href="/"><Image src={wwcclogo} alt="WWCC logo" /></a>
+	<a class="nav-toggle"></a>
+<nav>
+	<ul>{posts
+		.filter(file => file !== "index")
+		.sort(	(a, b) => {return a.frontmatter.sort - b.frontmatter.sort} )
+		.map(post => <li><a href={post.url}>{post.frontmatter.name} <span>{post.frontmatter.number}</span></a></li>)}
+	</ul>
+</nav>
+
+

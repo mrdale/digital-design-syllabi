@@ -1,0 +1,36 @@
+// Typography .............................................
+main{
+
+	* {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	*+*:not(dd, ul, h1, aside *, p:first-of-type, li:first-of-type) {
+		margin-top: 1.3em;
+	}
+
+	h1,
+	h1+h4 {
+		text-align: center;
+		margin-top: .5em;
+		;
+	}
+
+	h1+h4 {
+		margin-bottom: 1em;
+	}
+
+	:is(p, li):not(aside :is(p, li)) {
+		color: grey;
+	}
+
+	p {
+		line-height: 150%;
+	}
+
+	ul:not(aside ul) {
+		margin-top: .75em;
+	}
+
+}
