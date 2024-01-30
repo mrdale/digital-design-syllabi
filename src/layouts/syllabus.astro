@@ -57,6 +57,8 @@ switch (quarter) {
 	default:
 		qname = "Winter";
 }
+
+const statusClass = "status " + frontmatter.status;
 ---
 <!doctype html>
 <html lang="en">
@@ -82,6 +84,7 @@ switch (quarter) {
 						<small>({frontmatter.number})</small>
 					</h1>
 					<h4>{qname} Quarter, {year} | {ctc}</h4>
+					<div class={statusClass}>{frontmatter.status}</div>
 
 					<aside>
 						<article class="details">
