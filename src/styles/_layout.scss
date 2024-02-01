@@ -20,6 +20,46 @@ main {
     width: 80vw;
   }
 
+  .status{
+    // display:block;
+    margin:0 !important;
+    border-radius:.75em;
+    background: gray;
+    // font-weight: normal;
+    font-size:16px;
+    padding:.5em ;
+    color:hsla(0,0,0,.4);
+    // color:white;
+    // align-self: flex-start;
+
+    &.current{
+      background-color: var(--current);
+      &::after {
+        content: " ✓";
+      }
+    } //Active, no changes needed
+    &.staged{
+      background-color: var(--staged);
+            &::after {
+              content: " ~";
+            }
+    } //Ready for curriculum council review
+    &.review{
+      background-color: var(--review);
+            &::after {
+              content: " ≈";
+            }
+    } //In review by curriculum specialist
+    &.edit{
+      background-color: var(--edit);
+      color:hsla(0,0,100%,.6);
+      &::after {
+        content: " +";
+      }
+    } //Currently being edited
+  }
+
+
   //Aside .....................................................
   aside {
     font-size: 16px;

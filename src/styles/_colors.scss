@@ -9,4 +9,10 @@
   --nav-text-hover: hsla(var(--primary-h), var(--primary-s), 30%);
   --nav-links: hsla(var(--primary-h), var(--primary-s), 75%);
   --nav-links-hover: hsla(var(--primary-h), var(--primary-s), 60%);
+
+
+  --current: hsl(75, 100%, 50%);
+  --staged:  hsl(150, 100%, 50%);
+  --review:  hsl(200, 100%, 60%);
+  --edit:    hsl(250, 100%, 70%);
 }

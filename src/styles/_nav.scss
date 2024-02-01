@@ -12,9 +12,9 @@ header {
 	.link-home {
 		position: absolute;
 		top: 20px;
-		width: 20vw;
-		height: 20vw;
-		min-width: 150px;
+		// width: 20vw;
+		// height: 20vw;
+		// min-width: 150px;
 		left: calc(50vw - max(10vw, 75px));
 
 		@include bp(l) {}

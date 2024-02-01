@@ -81,10 +81,10 @@ const statusClass = "status " + frontmatter.status;
 			<main>
 					<h1>
 						{frontmatter.name}
-						<small>({frontmatter.number})</small>
+						<small>({frontmatter.number})</small> <span class={statusClass}>{frontmatter.status}</span>
 					</h1>
 					<h4>{qname} Quarter, {year} | {ctc}</h4>
-					<div class={statusClass}>{frontmatter.status}</div>
+
 
 					<aside>
 						<article class="details">
