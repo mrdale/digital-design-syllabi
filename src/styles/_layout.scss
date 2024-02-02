@@ -21,16 +21,12 @@ main {
   }
 
   .status{
-    // display:block;
-    margin:0 !important;
+    position:relative;
+    top: -7px;
     border-radius:.75em;
-    background: gray;
-    // font-weight: normal;
     font-size:16px;
     padding:.5em ;
-    color:hsla(0,0,0,.4);
-    // color:white;
-    // align-self: flex-start;
+    color:hsla(0,0,0,.5);
 
     &.current{
       background-color: var(--current);
@@ -52,7 +48,7 @@ main {
     } //In review by curriculum specialist
     &.edit{
       background-color: var(--edit);
-      color:hsla(0,0,100%,.6);
+      color:hsla(0,0,100%,.7);
       &::after {
         content: " +";
       }
