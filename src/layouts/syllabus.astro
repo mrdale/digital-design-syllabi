@@ -4,6 +4,7 @@ import Requirements from "../components/wwcc-requirements.astro";
 import Legal from "../components/wwcc-legal.astro";
 import Navs from "../components/navs.astro";
 import Books from "../components/books.astro";
+import CreditMap from "../components/creditMap.astro";
 import "../styles/style.scss";
 
 const general = {
@@ -123,6 +124,7 @@ const statusClass = "status " + frontmatter.status;
 				<h2>Master Course Outline</h2>
 				<slot />
 				<Books books={frontmatter.books} />
+				<CreditMap creditMap={frontmatter.creditMap} />
 				<Requirements />
 				<Legal />
 			</main>
