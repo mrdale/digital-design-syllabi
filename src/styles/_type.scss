@@ -6,7 +6,7 @@ main{
 		margin-bottom: 0;
 	}
 
-	*+*:not(dd, ul, h1, aside *, p:first-of-type, li:first-of-type) {
+	*+*:not(dd, ul, li, h1, aside *, p:first-of-type, li:first-of-type) {
 		margin-top: 1.3em;
 	}
 
@@ -29,8 +29,12 @@ main{
 		line-height: 150%;
 	}
 
-	ul:not(aside ul) {
+	li, ul:not(aside ul) {
 		margin-top: .75em;
+	}
+
+	li:last-child{
+		margin-bottom:1.3em;
 	}
 
 }
