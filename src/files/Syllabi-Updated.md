@@ -478,7 +478,7 @@ CS 240 is the second in a series of two courses designed to give students an ext
 * Explain ES6 semantics and syntax additions
 * Use a transpiler
 * Test JavaScript in the Browser
-* Analyze JavaScript in NodeJS
+* Analyze JavaScript in Node.js
 
 #### Course Topics
 * OOP principles used for JavaScript coding practices.
