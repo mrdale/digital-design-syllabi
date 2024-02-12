@@ -1,5 +1,5 @@
 // Typography .............................................
-main{
+main {
 
 	* {
 		margin-top: 0;
@@ -28,12 +28,12 @@ main{
 		line-height: 150%;
 	}
 
-	li, ul:not(aside ul) {
+	li,
+	ul:not(aside ul) {
 		margin-top: .75em;
 	}
 
-	li:last-child{
-		margin-bottom:1.3em;
+	li:last-child {
+		margin-bottom: 1.3em;
 	}
-
 }
