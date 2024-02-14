@@ -1,17 +1,21 @@
 ---
 const { creditMap } = Astro.props
 ---
-<hr/>
-<section id='creditMap'>
-<h2>Credits & Topics</h2>
-<dl class='accordion'>
-{ creditMap && creditMap.map(ct=>(
-	<dt><h3>Credit {ct.credit} - {ct.title} </h3></dt>
-	<dd>
-		<p><strong>Topics: </strong>{ct.topics}
-		{ct?.notes && (<em><strong>Notes:</strong> {ct.notes}</em>)}
-		</p>
-	</dd>
-))}
-</dl>
-</section>
+{ creditMap &&
+	<hr/>
+	<section id="creditMap">
+	<h2>Credits & Topics</h2>
+	<dl class='accordion'>
+
+	{ creditMap && creditMap.map(ct=>(
+		<dt><h3>Credit {ct.credit} - {ct.title} </h3></dt>
+		<dd>
+			<p><strong>Topics: </strong>{ct.topics}
+			{ct?.notes && (<em><strong>Notes:</strong> {ct.notes}</em>)}
+			</p>
+		</dd>
+	))}
+
+	</dl>
+	</section>
+}

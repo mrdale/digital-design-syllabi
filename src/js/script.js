@@ -1,7 +1,3 @@
-function boo(words) {
-  console.log(words)
-}
-
    function accordion(parent) {
      if (parent) {
        const dl = document.querySelectorAll(`.${parent}`);
