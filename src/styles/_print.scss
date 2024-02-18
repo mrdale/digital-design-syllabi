@@ -1,0 +1,18 @@
+@media print {
+	.mco {
+
+		is: (#legal,
+			#requirements,
+			#textbooks,
+			#creditMap,
+			astro-dev-toolbar,
+			aside) {
+			display: none !important;
+		}
+
+	}
+
+	main {
+		padding-top: 2em;
+	}
+}
