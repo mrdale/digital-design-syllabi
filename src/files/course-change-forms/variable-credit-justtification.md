@@ -3,18 +3,18 @@
 In 2022, without warning the ability to issue variable credits was taken from Digital Design and other vocational programs on the North Campus. This would not have been allowed to happen had their been a clear understanding of the unique challenges faced within corrections education on the part of administration and must be corrected. These challenges are described in detail in the Justification section. 
 
 Using fixed credits in an open enrollment scenarios is:
-* **Inaccurate:** Misreporting student progress
-* **Disenfranchising:** Legitimate student progress is unrecognized 
-* **Messy:** producing far more Y and Z grades
-* **An equity issue:** A student is expected to complete the same work with fewer class hours 
+* **Inaccurate:** Misreports student progress
+* **Disenfranchising:** Legitimate student progress is lost 
+* **Messy:** Produces far more Y and Z grades
+* **An equity issue:** Students are expected to complete the same course work with fewer class hours 
 * **Unethical:** Asking an instructor to keep two sets of records and misreport progress lacks academic integrity
 
-Restoring the ability to use variable credit on the North Campus is vital to the success of incarcerated students. It more accurately recognizes their progress through course material on their transcripts and ensures that none of their progress is lost due to circumstances beyond their control. It removes roadblocks and disruptions and more elegantly negotiates these challenges when they do inevitably occur. Instructors will once again issue grades with full-confidence and without the undue burden of maintaining both official and shadow records.
+Restoring the ability to use variable credit on the North Campus is vital to the success of incarcerated students. It correctly recognizes student progress through course material on their transcripts and it ensures that none of their progress is lost due to circumstances beyond their control. It removes roadblocks and disruptions and more elegantly negotiates these challenges when they do inevitably occur. It will allow instructors to once again issue grades with full-confidence and without the undue burden of maintaining shadow books.
 
-Digital Design in conjunction with the associated department Business and Computer Science Chairs,  requests that all of the courses with course change forms referencing this justification be adjusted to allow variable credit between one and five credit (in increments of one credit) on the North Campus.  
+Digital Design in conjunction with the associated department chairs (Business and Computer Science)  request that all of the courses with course change forms referencing this justification be adjusted to allow variable credit between one and five credit (in increments of one credit) on the North Campus.  
 
 ---
-## Justification & Background
+## Comprehensive Background & Justification
 Digital Design is offered as an open/continuous enrollment, non-cohort program. At any given point in time each student will be at a unique place within the program. Registrations are processed at the beginning of the quarter, and at any point throughout the quarter. 
 
 This rolling registration is driven by the limitations and unpredictability of the corrections education environment and is a vital part of successful outcomes for incarcerated students. 
